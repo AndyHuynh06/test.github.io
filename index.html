@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Test Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    #random-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Random Test Website</h1>
+  <p>Click the button below to generate a random number:</p>
+  <button id="random-button">Generate Random Number</button>
+  <p id="random-number"></p>
+  
+  <script>
+    var randomButton = document.getElementById('random-button');
+    var randomNumber = document.getElementById('random-number');
+    
+    randomButton.addEventListener('click', function() {
+      var number = Math.floor(Math.random() * 100) + 1;
+      randomNumber.textContent = 'Random Number: ' + number;
+    });
+  </script>
+</body>
+</html>
